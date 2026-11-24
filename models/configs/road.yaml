@@ -1,0 +1,13 @@
+model:
+  name: road_segformer
+  architecture: segformer
+  encoder: mit_b2
+  num_classes: 3
+  class_mapping:
+    0: background
+    1: road
+    2: pathway
+  checkpoint: models/checkpoints/road/model.pth
+  device: auto
+  input_size: [512, 512]
+  threshold: 0.5

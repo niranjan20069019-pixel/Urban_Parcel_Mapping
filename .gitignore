@@ -1,0 +1,21 @@
+__pycache__/
+*.pyc
+*.pyo
+.env
+.venv/
+venv/
+node_modules/
+dist/
+build/
+*.egg-info/
+.pytest_cache/
+data/projects/
+models/checkpoints/**/*.pth
+models/checkpoints/**/*.pt
+models/checkpoints/**/*.onnx
+*.log
+.DS_Store
+# Environment configuration
+.env
+.env.example
+.env.*

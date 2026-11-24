@@ -1,0 +1,26 @@
+model:
+  name: building_segformer
+  architecture: segformer
+  encoder: mit_b2
+  num_classes: 2
+  class_mapping:
+    0: background
+    1: building
+  checkpoint: models/checkpoints/building/model.pth
+  device: auto
+  input_size: [512, 512]
+  threshold: 0.6
+  
+training:
+  epochs: 100
+  batch_size: 8
+  learning_rate: 0.0001
+  optimizer: AdamW
+  scheduler: CosineAnnealingLR
+  augmentation:
+    horizontal_flip: 0.5
+    vertical_flip: 0.5
+    rotation: 90
+    scale: [0.8, 1.2]
+    brightness: 0.2
+    contrast: 0.2

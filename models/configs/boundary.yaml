@@ -1,0 +1,14 @@
+model:
+  name: boundary_segformer
+  architecture: segformer
+  encoder: mit_b2
+  num_classes: 4
+  class_mapping:
+    0: background
+    1: boundary
+    2: wall
+    3: fence
+  checkpoint: models/checkpoints/boundary/model.pth
+  device: auto
+  input_size: [512, 512]
+  threshold: 0.5
